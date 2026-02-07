@@ -43,34 +43,34 @@ A full-stack real-time web application that allows authenticated users to subscr
 
 ## 📂 Project Structure
 
-Real-Time Market Data Dashboard/
-│
-├── backend/
-│ ├── src/
-│ │ ├── config/ # env, jwt, redis config
-│ │ ├── controllers/ # auth & instrument controllers
-│ │ ├── middlewares/ # auth, validation, error handler
-│ │ ├── repositories/ # Redis subscription logic
-│ │ ├── routes/ # API routes
-│ │ ├── services/ # market data generator
-│ │ ├── websocket/ # WebSocket server
-│ │ ├── app.js
-│ │ └── server.js
-│ ├── docker-compose.yml
-│ └── package.json
-│
-├── frontend/
-│ ├── src/
-│ │ ├── api/ # REST API calls
-│ │ ├── components/ # UI components
-│ │ ├── context/ # Auth context
-│ │ ├── pages/ # Login & Dashboard
-│ │ ├── services/ # token & websocket service
-│ │ ├── index.css
-│ │ └── main.jsx
-│ └── package.json
-│
-└── README.md
+    Real-Time Market Data Dashboard/
+    │
+    ├── backend/
+    │ ├── src/
+    │ │ ├── config/ # env, jwt, redis config
+    │ │ ├── controllers/ # auth & instrument controllers
+    │ │ ├── middlewares/ # auth, validation, error handler
+    │ │ ├── repositories/ # Redis subscription logic
+    │ │ ├── routes/ # API routes
+    │ │ ├── services/ # market data generator
+    │ │ ├── websocket/ # WebSocket server
+    │ │ ├── app.js
+    │ │ └── server.js
+    │ ├── docker-compose.yml
+    │ └── package.json
+    │
+    ├── frontend/
+    │ ├── src/
+    │ │ ├── api/ # REST API calls
+    │ │ ├── components/ # UI components
+    │ │ ├── context/ # Auth context
+    │ │ ├── pages/ # Login & Dashboard
+    │ │ ├── services/ # token & websocket service
+    │ │ ├── index.css
+    │ │ └── main.jsx
+    │ └── package.json
+    │
+    └── README.md
 
 
 ---
