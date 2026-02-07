@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  /* hide buttons & inputs */
+  button,
+  input,
+  form {
+    display: none !important;
+  }
+
+  /* remove page padding */
+  body {
+    margin: 0;
+  }
+
+  /* table full width */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: 1px solid #000;
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  th {
+    background: #eee !important;
+    color: #000 !important;
+  }
+}
+
+@keyframes price-up {
+  0% {
+    background-color: rgba(22, 163, 74, 0.12);
+  }
+  60% {
+    background-color: rgba(22, 163, 74, 0.12);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes price-down {
+  0% {
+    background-color: rgba(220, 38, 38, 0.12);
+  }
+  60% {
+    background-color: rgba(220, 38, 38, 0.12);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.price-up {
+  animation: price-up 2.4s ease-out;
+}
+
+.price-down {
+  animation: price-down 2.4s ease-out;
+}
+
