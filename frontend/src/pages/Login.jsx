@@ -9,6 +9,7 @@ export default function Login() {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -41,10 +42,8 @@ export default function Login() {
           "url(https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1950&q=80)",
       }}
     >
-      {/* very light overlay */}
       <div className="absolute inset-0 bg-white/30" />
 
-      {/* Card */}
       <div className="relative z-10 bg-white rounded-xl shadow-lg w-full max-w-sm p-8">
         <h2 className="text-xl font-semibold text-slate-900 text-center">
           Market Dashboard
@@ -68,13 +67,24 @@ export default function Login() {
             onChange={(e) => setUsername(e.target.value)}
           />
 
-          <input
-            type="password"
-            className="w-full h-10 px-3 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          {/* Password with show/hide */}
+          <div className="relative">
+            <input
+              type={showPassword ? "text" : "password"}
+              className="w-full h-10 px-3 pr-10 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute inset-y-0 right-2 flex items-center text-xs text-slate-500 hover:text-slate-700"
+            >
+              {showPassword ? "Hide" : "Show"}
+            </button>
+          </div>
 
           <button
             type="submit"
